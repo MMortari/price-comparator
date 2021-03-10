@@ -91,14 +91,16 @@ async function fetchProducts() {
         let mailContent = '';
 
         if (productCurrentPrice <= product.intendedPrice) {
-          console.log(`Produto chegou ao preço que você quer, ${dinheiroMask(productCurrentPrice)}`);
+          console.log(`Produto bateu o preço que você parametrizou (${dinheiroMask(product.intendedPrice)}), ${dinheiroMask(productCurrentPrice)}`);
 
-          mailContent += `Produto chegou ao preço que você quer, ${dinheiroMask(productCurrentPrice)}<br/><br/>`;
+          mailContent += `Produto bateu o preço que você parametrizou (${dinheiroMask(product.intendedPrice)}), ${dinheiroMask(
+            productCurrentPrice
+          )}<br/><br/>`;
         }
 
-        if (productCurrentPrice < product.latestPrice) {
-          const newPricePercent = calculatePercent(product.latestPrice, productCurrentPrice);
+        const newPricePercent = calculatePercent(product.latestPrice, productCurrentPrice);
 
+        if (productCurrentPrice < product.latestPrice || newPricePercent > 2) {
           console.log(
             `Produto abaixou de preço, antes estava em ${dinheiroMask(product.latestPrice)}, agora está em ${dinheiroMask(
               productCurrentPrice

@@ -11,12 +11,8 @@ This is a javascript code that webscraps on amazon and if the price is lower or 
 3. Create a `env.json` based on `env.example.json` to configure your gmail account
 4. Create a `config.json` based on `config.example.json` to configure your products listed
 
-## How to use
+## Starting it
 
-I recommend to use PM2
+Run docker composer
 
-`$ npm install pm2 -g`
-
-And use this command
-
-`$ npm run start-pm2`
+`$ docker-compose up -d`

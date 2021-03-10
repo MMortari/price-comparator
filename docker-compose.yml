@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  price-comparator:
+    container_name: price-comparator
+    build: .
+    command: yarn start
