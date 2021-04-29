@@ -1,15 +1,16 @@
 {
   "name": "price-comparator",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "cron": "^1.8.2",
     "masks-br": "^1.0.0",
     "nodemailer": "^6.5.0",
-    "puppeteer": "^8.0.0"
+    "puppeteer": "^8.0.0",
+    "puppeteer-core": "^8.0.0"
   }
 }

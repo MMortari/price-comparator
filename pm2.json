@@ -2,7 +2,7 @@
   "apps": [
     {
       "name": "price-comparator",
-      "script": "./index.js"
+      "script": "./src/index.js"
     }
   ]
 }
